@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E63946">
+    <title>Valentine Love Messages 💌</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --red: #E63946;
+            --pink: #FF85A2;
+            --gold: #FFD700;
+            --cream: #FFF8E7;
+            --dark: #2B2D42;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFF8E7 0%, #FFE5EC 50%, #FFF8E7 100%);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .heart-particle {
+            position: absolute;
+            opacity: 0;
+            font-size: 20px;
+            animation: floatUp 15s linear infinite;
+        }
+        
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 0.4; transform: translateY(90vh) scale(1); }
+            90% { opacity: 0.4; transform: translateY(10vh) scale(1); }
+            100% { transform: translateY(-10vh) scale(0); opacity: 0; }
+        }
+        
+        /* Sparkles Animation */
+        .sparkle {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            animation: sparkleAnim 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkleAnim {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #E63946 0%, #FF85A2 50%, #FFD700 100%);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(230, 57, 70, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            display: block;
+            animation: logoFloat 3s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+        
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            color: white;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            background: white;
+            padding: 50px 20px;
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-section::before {
+            content: '💝';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.03;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--red);
+            margin: 0 auto 20px;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        
+        .profile-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+        
+        .profile-bio {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        .social-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .social-btn img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .instagram-btn {
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+        }
+        
+        .telegram-btn {
+            background: linear-gradient(135deg, #0088cc, #229ED9);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(230, 57, 70, 0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            transition: left 0.5s;
+        }
+        
+        .stat-card:hover::before {
+            left: 100%;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.2);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Countdown */
+        .countdown {
+            background: linear-gradient(135deg, #E63946 0%, #FF85A2 100%);
+            padding: 40px 30px;
+            border-radius: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 12px 35px rgba(230, 57, 70, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown::before {
+            content: '❤️';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+        
+        .countdown h2 {
+            text-align: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .time-box {
+            background: white;
+            padding: 25px 15px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .time-box:hover {
+            transform: scale(1.1);
+        }
+        
+        .time-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--red);
+            display: block;
+        }
+        
+        .time-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        /* Ticker */
+        .ticker {
+            background: white;
+            padding: 20px 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.1);
+        }
+        
+        .ticker-wrap {
+            display: flex;
+            animation: scroll 30s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .ticker-item {
+            flex: 0 0 auto;
+            padding: 0 30px;
+            white-space: nowrap;
+            color: #666;
+        }
+        
+        .ticker-item strong {
+            color: var(--red);
+            font-weight: 700;
+        }
+        
+        /* Form */
+        .form-section {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 12px 35px rgba(230, 57, 70, 0.15);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-section::before {
+            content: '💌';
+            position: absolute;
+            font-size: 12rem;
+            opacity: 0.03;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--red);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .form-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--red);
+            box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
+        }
+        
+        textarea {
+            min-height: 120px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            resize: vertical;
+        }
+        
+        .char-count {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        .char-count.warning { color: #ff9800; font-weight: 600; }
+        .char-count.danger { color: var(--red); font-weight: 700; }
+        
+        .preview {
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #FFF8E7 0%, #FFE5EC 100%);
+            border-radius: 20px;
+            display: none;
+            border: 2px dashed var(--pink);
+        }
+        
+        .preview.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .preview-msg {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--dark);
+            line-height: 2;
+        }
+        
+        /* Link Display Box */
+        .link-display {
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+            border-radius: 20px;
+            border: 3px solid #4CAF50;
+            display: none;
+            animation: slideIn 0.5s;
+            position: relative;
+        }
+        
+        .link-display.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .link-display h3 {
+            font-family: 'Playfair Display', serif;
+            color: #2E7D32;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .link-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px dashed #4CAF50;
+            margin-bottom: 20px;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #2E7D32;
+            text-align: center;
+        }
+        
+        .link-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .link-actions button {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #E63946 0%, #FF85A2 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+        }
+        
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--red);
+            border: 3px solid var(--red);
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: var(--red);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+        }
+        
+        .btn-success:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-whatsapp:hover:not(:disabled) {
+            transform: translateY(-3px);
+        }
+        
+        .btn-whatsapp img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            animation: scaleIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #666;
+            transition: all 0.3s;
+        }
+        
+        .modal-close:hover {
+            background: var(--red);
+            color: white;
+            transform: rotate(90deg);
+        }
+        
+        .modal h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--red);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .modal-social {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .social-card {
+            background: #f0f0f0;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+            border: 3px solid transparent;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-card.clicked {
+            background: #E8F5E9;
+            border-color: #4CAF50;
+        }
+        
+        .social-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .modal-done {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #E63946 0%, #FF85A2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .modal-done:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .modal-done:not(:disabled):hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Receiver Page */
+        .receiver-page {
+            display: none;
+        }
+        
+        .receiver-page.active {
+            display: block;
+        }
+        
+        .receiver-tagline {
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--red);
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(230, 57, 70, 0.2);
+            position: relative;
+        }
+        
+        /* Rose Message Section */
+        .rose-message {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #FFE5EC 0%, #FFF8E7 100%);
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rose-message::before,
+        .rose-message::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://i.ibb.co/9kqXN9nh/rose-png.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+        }
+        
+        .rose-message::before {
+            top: 10px;
+            left: 10px;
+            transform: rotate(-20deg);
+        }
+        
+        .rose-message::after {
+            bottom: 10px;
+            right: 10px;
+            transform: rotate(20deg);
+        }
+        
+        .rose-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--red);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .rose-img {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            vertical-align: middle;
+            animation: roseFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes roseFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .envelope-wrap {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .envelope {
+            max-width: 500px;
+            margin: 0 auto;
+            animation: float 3s ease-in-out infinite;
+            position: relative;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        
+        .envelope img {
+            width: 100%;
+            filter: drop-shadow(0 10px 30px rgba(230, 57, 70, 0.2));
+        }
+        
+        .letter-seal {
+            width: 80px;
+            height: 80px;
+            margin-top: -50px;
+            animation: sealPulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 5px 10px rgba(230, 57, 70, 0.4));
+        }
+        
+        @keyframes sealPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.15) rotate(10deg); }
+        }
+        
+        /* Cupid Arrows Animation */
+        .cupid-arrow {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0;
+            z-index: 0;
+        }
+        
+        .cupid-arrow-left {
+            left: -80px;
+            top: 50%;
+            animation: arrowLeft 3s ease-in-out infinite;
+        }
+        
+        .cupid-arrow-right {
+            right: -80px;
+            top: 50%;
+            transform: scaleX(-1);
+            animation: arrowRight 3s ease-in-out infinite;
+        }
+        
+        @keyframes arrowLeft {
+            0%, 100% { left: -80px; opacity: 0; }
+            50% { left: 20px; opacity: 0.6; }
+        }
+        
+        @keyframes arrowRight {
+            0%, 100% { right: -80px; opacity: 0; }
+            50% { right: 20px; opacity: 0.6; }
+        }
+        
+        .letter-content {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(230, 57, 70, 0.15);
+            animation: slideUp 1s ease-out;
+            position: relative;
+            overflow: visible;
+        }
+        
+        .letter-content::before {
+            content: '💕';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.03;
+            top: 50%;
+            right: -50px;
+            transform: translateY(-50%);
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .letter-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 2px dashed var(--pink);
+        }
+        
+        .letter-to {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+        
+        .letter-relation {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+            color: var(--pink);
+        }
+        
+        .letter-msg {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            line-height: 2.2;
+            text-align: center;
+            color: var(--dark);
+            margin: 30px 0;
+            min-height: 120px;
+        }
+        
+        .stickers {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .sticker {
+            width: 70px;
+            height: 70px;
+            animation: bounce 2s ease-in-out infinite;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+        }
+        
+        .sticker:nth-child(2) { animation-delay: 0.3s; }
+        .sticker:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(10deg); }
+        }
+        
+        .reaction {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px dashed var(--pink);
+        }
+        
+        .reaction h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--red);
+        }
+        
+        .reaction-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .reaction-btn {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .reaction-yes {
+            background: linear-gradient(135deg, #E63946 0%, #FF85A2 100%);
+            color: white;
+        }
+        
+        .reaction-day {
+            background: linear-gradient(135deg, #FFD700 0%, #FF85A2 100%);
+            color: white;
+        }
+        
+        .reaction-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .create-own {
+            text-align: center;
+            margin: 60px 0;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, #FF85A2 0%, #FFF8E7 100%);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .create-own::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url('https://i.ibb.co/nqShHq1V/sparkle.png');
+            background-size: contain;
+            top: 20px;
+            left: 20px;
+            animation: sparkleAnim 2s ease-in-out infinite;
+        }
+        
+        .create-own::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url('https://i.ibb.co/nqShHq1V/sparkle.png');
+            background-size: contain;
+            bottom: 20px;
+            right: 20px;
+            animation: sparkleAnim 2s ease-in-out infinite 1s;
+        }
+        
+        .create-own-tagline {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+        
+        .create-own h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--red);
+            margin-bottom: 25px;
+        }
+        
+        .create-own-btn {
+            padding: 18px 45px;
+            background: linear-gradient(135deg, #E63946 0%, #FF85A2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .create-own-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(230, 57, 70, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2B2D42 0%, #1a1b2e 100%);
+            padding: 50px 20px 25px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .footer-heart-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        footer p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .heart {
+            color: var(--red);
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--pink);
+        }
+        
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--red);
+            z-index: 9999;
+            animation: confettiFall 3s linear forwards;
+        }
+        
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .timer { grid-template-columns: repeat(2, 1fr); }
+            .time-value { font-size: 2rem; }
+            .form-section { padding: 30px 25px; }
+            .btn-group { flex-direction: column; }
+            .btn { min-width: 100%; }
+            .modal-content { padding: 35px 25px; }
+            .modal-social { flex-direction: column; }
+            .letter-content { padding: 35px 25px; }
+            .receiver-tagline { font-size: 2rem; }
+            .link-actions { flex-direction: column; }
+            .rose-text { font-size: 1.8rem; }
+            .cupid-arrow { width: 40px; height: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <!-- Landing Page -->
+    <div id="landing">
+        <header>
+            <img src="https://i.ibb.co/1tZMJtGS/valentine.png" alt="Logo" class="logo">
+            <h1>Valentine Love Messages 💌</h1>
+            <p>Send Your Heart to Your Loved Ones</p>
+        </header>
+        
+        <div class="profile-section">
+            <div class="profile-container">
+                <img src="https://i.ibb.co/8g10Nt3C/Whats-App-Image-2026-01-29-at-12-58-00-PM.jpg" alt="Anubhav Kumar" class="profile-img">
+                <h2 class="profile-name">Anubhav Kumar</h2>
+                <p class="profile-bio">AI tools • Design • Web Dev<br>Social media growth systems<br>For creators & businesses</p>
+                <div class="social-btns">
+                    <a href="https://instagram.com" target="_blank" class="social-btn instagram-btn">
+                        <img src="https://i.ibb.co/ksbVd2Fw/Instagram-icon.png" alt="Instagram">
+                        Follow on Instagram
+                    </a>
+                    <a href="https://t.me" target="_blank" class="social-btn telegram-btn">
+                        <img src="https://i.ibb.co/r2WRLq3j/Telegram-logo.png" alt="Telegram">
+                        Join Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">💌</div>
+                    <div class="stat-number" id="wishes">5,847</div>
+                    <div class="stat-label">Wishes Sent</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" id="online">234</div>
+                    <div class="stat-label">Online Now</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Love Spreading</div>
+                </div>
+            </div>
+            
+            <div class="countdown">
+                <h2>⏰ Countdown to Valentine's Day 2026</h2>
+                <div class="timer">
+                    <div class="time-box">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ticker">
+                <div class="ticker-wrap" id="ticker"></div>
+            </div>
+            
+            <div class="form-section">
+                <h2 class="form-title">Create Your Love Message 💖</h2>
+                <p class="form-subtitle">Fill in the details below to send your special Valentine's message</p>
+                
+                <form id="form">
+                    <div class="form-group">
+                        <label>Your Name ✍️</label>
+                        <input type="text" id="sender" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Receiver's Name 💝</label>
+                        <input type="text" id="receiver" placeholder="Enter receiver's name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sending for: Choose the relation of your receiver 💌</label>
+                        <select id="relation" required>
+                            <option value="">Select Relation</option>
+                            <option value="Boyfriend">Boyfriend</option>
+                            <option value="Girlfriend">Girlfriend</option>
+                            <option value="Husband">Husband</option>
+                            <option value="Wife">Wife</option>
+                            <option value="Crush">Crush</option>
+                            <option value="Best Friend">Best Friend</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Special Message 💌</label>
+                        <textarea id="message" placeholder="Write your heartfelt message here..." maxlength="250" required></textarea>
+                        <div class="char-count"><span id="count">0</span> / 250 characters</div>
+                    </div>
+                    
+                    <div class="preview" id="preview">
+                        <h3 style="text-align: center; margin-bottom: 20px;">✨ Live Preview</h3>
+                        <div class="preview-msg" id="previewMsg">Your message will appear here...</div>
+                    </div>
+                    
+                    <!-- Link Display Box -->
+                    <div class="link-display" id="linkDisplay">
+                        <h3>🎉 Your Love Link is Ready!</h3>
+                        <div class="link-box" id="linkBox">Your link will appear here...</div>
+                        <div class="link-actions">
+                            <button type="button" class="btn btn-success" id="copyLink">📋 Copy Link</button>
+                            <button type="button" class="btn btn-whatsapp" id="shareWhatsapp">
+                                <img src="https://i.ibb.co/0pZsGTb1/Whats-App.webp" alt="WhatsApp">
+                                Share on WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary" id="generate">🔗 Generate Link</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Made with <img src="https://i.ibb.co/1ffHBPtD/heart-PNG.png" alt="❤️" class="footer-heart-icon"> for spreading love</p>
+            <p>© 2026 Valentine Love Messages. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Receiver Page -->
+    <div id="receiver" class="receiver-page">
+        <header>
+            <img src="https://i.ibb.co/1tZMJtGS/valentine.png" alt="Logo" class="logo">
+            <h1>You've Got a Love Message! 💌</h1>
+            <p>Someone special sent this just for you</p>
+        </header>
+        
+        <div class="container">
+            <div class="receiver-tagline">
+                "Love recognizes no barriers, it jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope"
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">💌</div>
+                    <div class="stat-number" id="wishes2">5,847</div>
+                    <div class="stat-label">Wishes Sent</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" id="online2">234</div>
+                    <div class="stat-label">Online Now</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Love Spreading</div>
+                </div>
+            </div>
+            
+            <div class="countdown">
+                <h2>⏰ Countdown to Valentine's Day 2026</h2>
+                <div class="timer">
+                    <div class="time-box">
+                        <span class="time-value" id="days2">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours2">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes2">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds2">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rose Message -->
+            <div class="rose-message">
+                <div class="rose-text">
+                    <img src="https://i.ibb.co/9kqXN9nh/rose-png.png" alt="🌹" class="rose-img">
+                    I Love You
+                    <img src="https://i.ibb.co/9kqXN9nh/rose-png.png" alt="🌹" class="rose-img">
+                </div>
+                <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--dark); margin-top: 15px;">
+                    From <strong id="roseFrom">...</strong> to <strong id="roseTo">...</strong>
+                </p>
+            </div>
+            
+            <div class="letter-container">
+                <div class="envelope-wrap">
+                    <div class="envelope">
+                        <img src="https://i.ibb.co/0y8KCfgN/envelope.png" alt="Envelope">
+                        <img src="https://i.ibb.co/qF5Vm2Df/letter-seal.png" alt="Seal" class="letter-seal">
+                    </div>
+                </div>
+                
+                <div class="letter-content">
+                    <!-- Cupid Arrows -->
+                    <img src="https://i.ibb.co/bjdgT0Vb/cupid-arrow.png" alt="Arrow" class="cupid-arrow cupid-arrow-left">
+                    <img src="https://i.ibb.co/bjdgT0Vb/cupid-arrow.png" alt="Arrow" class="cupid-arrow cupid-arrow-right">
+                    
+                    <div class="letter-header">
+                        <div class="letter-to">Dear <span id="recName">...</span> 💕</div>
+                        <div class="letter-relation">From your <span id="recRel">...</span></div>
+                    </div>
+                    
+                    <div class="letter-msg" id="recMsg"></div>
+                    
+                    <div id="preDesignedMsg" style="font-family: 'Dancing Script', cursive; font-size: 1.4rem; text-align: center; color: var(--pink); margin: 20px 0; font-style: italic;"></div>
+                    
+                    <div class="stickers">
+                        <img src="https://i.ibb.co/1ffHBPtD/heart-PNG.png" alt="Heart" class="sticker">
+                        <img src="https://i.ibb.co/9kqXN9nh/rose-png.png" alt="Rose" class="sticker">
+                        <img src="https://i.ibb.co/bjdgT0Vb/cupid-arrow.png" alt="Cupid" class="sticker">
+                    </div>
+                    
+                    <div class="reaction">
+                        <h3>How does this make you feel? 😊</h3>
+                        <div class="reaction-btns">
+                            <button class="reaction-btn reaction-yes" onclick="react('yes')">💖 Yes!</button>
+                            <button class="reaction-btn reaction-day" onclick="react('day')">🌟 Made My Day!</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="create-own">
+                    <div class="create-own-tagline">Spread the Love...</div>
+                    <h2>Want to Send Your Own Love Message? 💌</h2>
+                    <p style="color: #666; margin-bottom: 25px; font-size: 1.05rem;">Express your feelings to someone special this Valentine's Day</p>
+                    <button class="create-own-btn" onclick="goHome()">✨ Create Your Love Message</button>
+                </div>
+                
+                <div class="profile-section">
+                    <div class="profile-container">
+                        <img src="https://i.ibb.co/8g10Nt3C/Whats-App-Image-2026-01-29-at-12-58-00-PM.jpg" alt="Anubhav Kumar" class="profile-img">
+                        <h2 class="profile-name">Anubhav Kumar</h2>
+                        <p class="profile-bio">AI tools • Design • Web Dev<br>Social media growth systems<br>For creators & businesses</p>
+                        <div class="social-btns">
+                            <a href="https://instagram.com" target="_blank" class="social-btn instagram-btn">
+                                <img src="https://i.ibb.co/ksbVd2Fw/Instagram-icon.png" alt="Instagram">
+                                Follow on Instagram
+                            </a>
+                            <a href="https://t.me" target="_blank" class="social-btn telegram-btn">
+                                <img src="https://i.ibb.co/r2WRLq3j/Telegram-logo.png" alt="Telegram">
+                                Join Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Made with <img src="https://i.ibb.co/1ffHBPtD/heart-PNG.png" alt="❤️" class="footer-heart-icon"> for spreading love</p>
+            <p>© 2026 Valentine Love Messages. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>🎉 Almost There!</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Help us spread the love! Click both buttons below 💌</p>
+            
+            <div class="modal-social">
+                <div class="social-card" id="insta" onclick="clickSocial('insta')">
+                    <img src="https://i.ibb.co/ksbVd2Fw/Instagram-icon.png" alt="Instagram">
+                    <p>Follow on<br>Instagram</p>
+                </div>
+                <div class="social-card" id="tg" onclick="clickSocial('tg')">
+                    <img src="https://i.ibb.co/r2WRLq3j/Telegram-logo.png" alt="Telegram">
+                    <p>Join<br>Telegram</p>
+                </div>
+            </div>
+            
+            <button class="modal-done" id="done" onclick="done()" disabled>🔒 Click Both to Continue</button>
+        </div>
+    </div>
+    
+    <script>
+        // Pre-designed messages database
+        const preDesignedMessages = {
+            'Boyfriend': [
+                "You make my heart skip a beat every single day. I'm so lucky to have you! 💖",
+                "Every moment with you feels like a beautiful dream I never want to wake up from.",
+                "You're not just my boyfriend, you're my best friend and my forever love.",
+                "My love for you grows stronger with each passing day. You complete me! ❤️",
+                "You're the reason I believe in true love. Thank you for being mine!",
+                "Being with you is my favorite place to be. I love you more than words can say!",
+                "You make every day brighter just by being in it. I'm forever yours! 💕",
+                "My heart belongs to you and only you. Happy Valentine's Day, my love!",
+                "You're my sunshine on cloudy days and my comfort in every moment.",
+                "I fall in love with you more and more each day. You're my everything! 🌹"
+            ],
+            'Girlfriend': [
+                "You're the most beautiful person inside and out. I'm blessed to call you mine! 💖",
+                "Every day with you is an adventure filled with love and happiness.",
+                "You light up my world in ways I never knew were possible. I love you!",
+                "My heart beats only for you. You're my forever Valentine! ❤️",
+                "You're not just my girlfriend, you're my soulmate and my best friend.",
+                "Thank you for filling my life with so much love and joy. You're amazing!",
+                "I can't imagine my life without you. You make everything perfect! 💕",
+                "Your smile is my favorite sight in the whole world. I love you endlessly!",
+                "You're my dream come true and I fall for you more every single day.",
+                "Being loved by you is the greatest gift I've ever received. Forever yours! 🌹"
+            ],
+            'Husband': [
+                "You're my rock, my love, and my forever partner. Thank you for everything! 💖",
+                "Growing old with you is my favorite adventure. I love you more each day!",
+                "You make every moment special and every day worth living. Forever yours! ❤️",
+                "Thank you for being the most amazing husband. You complete me!",
+                "My love for you has no limits. You're my everything, today and always!",
+                "You're not just my husband, you're my best friend and my soulmate! 💕",
+                "Life with you is a beautiful journey I never want to end. I love you!",
+                "You make me feel loved, cherished, and complete. Happy Valentine's Day!",
+                "Every day I thank my stars for bringing you into my life. You're perfect!",
+                "You're my forever love and my constant support. I'm so grateful for you! 🌹"
+            ],
+            'Wife': [
+                "You're the love of my life and my greatest blessing. I adore you! 💖",
+                "Being married to you is the best decision I ever made. I love you endlessly!",
+                "You make our house a home filled with love and warmth. Forever grateful! ❤️",
+                "You're my partner, my love, and my everything. Thank you for being you!",
+                "My heart belongs to you today, tomorrow, and always. You're amazing! 💕",
+                "You're not just my wife, you're my soulmate and my best friend forever!",
+                "Life with you is a beautiful adventure. I love you more than words can say!",
+                "You complete me in every way. Happy Valentine's Day to my perfect wife!",
+                "Every moment with you is a precious gift. I'm so lucky to have you!",
+                "You're my forever Valentine and the love of my life. I cherish you! 🌹"
+            ],
+            'Crush': [
+                "I've been wanting to tell you... you make my heart race every time I see you! 💖",
+                "You're always on my mind and in my heart. Hope you feel the same way!",
+                "Your smile brightens my day in ways you can't imagine. I really like you! ❤️",
+                "I've been crushing on you for a while now. Will you be my Valentine?",
+                "There's something special about you that I can't get out of my mind! 💕",
+                "Every time I see you, I can't help but smile. You're amazing!",
+                "I hope this message shows you how special you are to me. Happy Valentine's!",
+                "You've captured my heart without even trying. I really like you a lot!",
+                "I wanted to take this chance to tell you... you mean a lot to me! 💝",
+                "My heart skips a beat whenever you're around. Would love to know you better! 🌹"
+            ],
+            'Best Friend': [
+                "You're not just my best friend, you're family. Love you always! 💖",
+                "Thank you for always being there through thick and thin. You're the best!",
+                "Life is so much better with you in it. Happy Valentine's Day, bestie! ❤️",
+                "You make every day brighter just by being you. So grateful for our friendship!",
+                "Best friends like you are rare and precious. Thank you for everything! 💕",
+                "You know me better than anyone and love me anyway. That's true friendship!",
+                "Here's to our amazing friendship and all the memories we've created together!",
+                "You're my partner in crime and my rock. Love you, best friend! 💝",
+                "Through ups and downs, you've always been there. You're simply the best!",
+                "Friendship like ours is forever. Happy Valentine's Day to my best friend! 🌹"
+            ]
+        };
+        
+        let link = '';
+        let instaClick = false;
+        let tgClick = false;
+        
+        // Get random pre-designed message based on relation
+        function getPreDesignedMessage(relation) {
+            if (preDesignedMessages[relation]) {
+                const messages = preDesignedMessages[relation];
+                const randomIndex = Math.floor(Math.random() * messages.length);
+                return messages[randomIndex];
+            }
+            return "You mean the world to me! Happy Valentine's Day! 💖";
+        }
+        
+        // Floating hearts
+        function createHearts() {
+            const hearts = ['❤️', '💕', '💖', '💗', '💝', '💞'];
+            const container = document.getElementById('hearts');
+            if (!container) return;
+            
+            for (let i = 0; i < 15; i++) {
+                const h = document.createElement('div');
+                h.className = 'heart-particle';
+                h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                h.style.left = Math.random() * 100 + '%';
+                h.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                h.style.animationDelay = Math.random() * 15 + 's';
+                container.appendChild(h);
+            }
+        }
+        
+        // Countdown
+        function countdown() {
+            try {
+                const target = new Date('2026-02-14T23:59:59+05:30').getTime();
+                const now = new Date().getTime();
+                const diff = target - now;
+                
+                if (diff < 0) {
+                    return;
+                }
+                
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                ['days', 'days2'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = String(d).padStart(2, '0');
+                });
+                ['hours', 'hours2'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = String(h).padStart(2, '0');
+                });
+                ['minutes', 'minutes2'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = String(m).padStart(2, '0');
+                });
+                ['seconds', 'seconds2'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = String(s).padStart(2, '0');
+                });
+            } catch (error) {
+                console.error('Countdown error:', error);
+            }
+        }
+        
+        // Counters
+        function updateCounters() {
+            try {
+                const w = 5847 + Math.floor(Math.random() * 100);
+                const o = 234 + Math.floor(Math.random() * 20 - 10);
+                ['wishes', 'wishes2'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = w.toLocaleString();
+                });
+                ['online', 'online2'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = Math.max(150, o);
+                });
+            } catch (error) {
+                console.error('Counter update error:', error);
+            }
+        }
+        
+        // Ticker
+        function initTicker() {
+            try {
+                const names = [
+                    'Priya from Mumbai', 'Rahul from Delhi', 'Sneha from Bangalore',
+                    'Arjun from Chennai', 'Kavya from Hyderabad', 'Rohan from Pune',
+                    'Ananya from Kolkata', 'Vikram from Ahmedabad', 'Ishita from Jaipur'
+                ];
+                const ticker = document.getElementById('ticker');
+                if (!ticker) return;
+                
+                for (let i = 0; i < 18; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'ticker-item';
+                    div.innerHTML = `<strong>${names[i % names.length]}</strong> just sent a love message 💌`;
+                    ticker.appendChild(div);
+                }
+            } catch (error) {
+                console.error('Ticker init error:', error);
+            }
+        }
+        
+        // Character counter
+        const msgInput = document.getElementById('message');
+        const countSpan = document.getElementById('count');
+        const charCount = document.querySelector('.char-count');
+        const preview = document.getElementById('preview');
+        const previewMsg = document.getElementById('previewMsg');
+        
+        if (msgInput && countSpan && preview && previewMsg) {
+            msgInput.addEventListener('input', function() {
+                try {
+                    const len = this.value.length;
+                    countSpan.textContent = len;
+                    
+                    if (len > 230) {
+                        charCount.classList.add('danger');
+                        charCount.classList.remove('warning');
+                    } else if (len > 200) {
+                        charCount.classList.add('warning');
+                        charCount.classList.remove('danger');
+                    } else {
+                        charCount.classList.remove('warning', 'danger');
+                    }
+                    
+                    if (len > 0) {
+                        preview.classList.add('active');
+                        previewMsg.textContent = this.value;
+                    } else {
+                        preview.classList.remove('active');
+                    }
+                } catch (error) {
+                    console.error('Input error:', error);
+                }
+            });
+        }
+        
+        // Generate link
+        const generateBtn = document.getElementById('generate');
+        if (generateBtn) {
+            generateBtn.addEventListener('click', function() {
+                try {
+                    const sender = document.getElementById('sender').value.trim();
+                    const receiver = document.getElementById('receiver').value.trim();
+                    const relation = document.getElementById('relation').value;
+                    const message = document.getElementById('message').value.trim();
+                    
+                    if (!sender || !receiver || !relation || !message) {
+                        alert('Please fill in all fields! 💝');
+                        return;
+                    }
+                    
+                    const data = { sender, receiver, relation, message };
+                    const encoded = btoa(encodeURIComponent(JSON.stringify(data)));
+                    link = window.location.origin + window.location.pathname + '?d=' + encoded;
+                    
+                    const modal = document.getElementById('modal');
+                    if (modal) modal.classList.add('active');
+                } catch (error) {
+                    console.error('Generate link error:', error);
+                    alert('Error generating link. Please try again.');
+                }
+            });
+        }
+        
+        // Modal
+        function closeModal() {
+            try {
+                const modal = document.getElementById('modal');
+                if (modal) modal.classList.remove('active');
+            } catch (error) {
+                console.error('Close modal error:', error);
+            }
+        }
+        
+        function clickSocial(type) {
+            try {
+                if (type === 'insta') {
+                    instaClick = true;
+                    const insta = document.getElementById('insta');
+                    if (insta) insta.classList.add('clicked');
+                    window.open('https://instagram.com', '_blank');
+                } else {
+                    tgClick = true;
+                    const tg = document.getElementById('tg');
+                    if (tg) tg.classList.add('clicked');
+                    window.open('https://t.me', '_blank');
+                }
+                
+                if (instaClick && tgClick) {
+                    const btn = document.getElementById('done');
+                    if (btn) {
+                        btn.disabled = false;
+                        btn.textContent = '✨ Done - Continue';
+                    }
+                }
+            } catch (error) {
+                console.error('Social click error:', error);
+            }
+        }
+        
+        function done() {
+            try {
+                // Show the link display box
+                const linkDisplay = document.getElementById('linkDisplay');
+                const linkBox = document.getElementById('linkBox');
+                if (linkDisplay && linkBox) {
+                    linkBox.textContent = link;
+                    linkDisplay.classList.add('active');
+                    linkDisplay.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                
+                // Close modal
+                closeModal();
+                
+                // Reset modal state
+                instaClick = false;
+                tgClick = false;
+                const insta = document.getElementById('insta');
+                const tg = document.getElementById('tg');
+                const doneBtn = document.getElementById('done');
+                if (insta) insta.classList.remove('clicked');
+                if (tg) tg.classList.remove('clicked');
+                if (doneBtn) {
+                    doneBtn.disabled = true;
+                    doneBtn.textContent = '🔒 Click Both to Continue';
+                }
+                
+                // Confetti
+                confetti();
+            } catch (error) {
+                console.error('Done error:', error);
+            }
+        }
+        
+        // Copy link from display box
+        const copyLinkBtn = document.getElementById('copyLink');
+        if (copyLinkBtn) {
+            copyLinkBtn.addEventListener('click', function() {
+                try {
+                    if (link) {
+                        navigator.clipboard.writeText(link).then(() => {
+                            alert('Link copied! 💌 Share it with your loved one!');
+                            confetti();
+                        }).catch(err => {
+                            console.error('Copy failed:', err);
+                            alert('Failed to copy. Please copy manually.');
+                        });
+                    }
+                } catch (error) {
+                    console.error('Copy link error:', error);
+                }
+            });
+        }
+        
+        // Share on WhatsApp from display box
+        const shareWhatsappBtn = document.getElementById('shareWhatsapp');
+        if (shareWhatsappBtn) {
+            shareWhatsappBtn.addEventListener('click', function() {
+                try {
+                    if (link) {
+                        const rel = document.getElementById('relation').value;
+                        const msg = document.getElementById('message').value;
+                        const text = `Hey Darling 💌\nThis special message is from your ${rel} ❤️\n\n${msg}\n\nCheck your Valentine's surprise here: ${link}\n\nJoin our community:\n📸 Instagram: https://instagram.com\n💬 Telegram: https://t.me`;
+                        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+                    }
+                } catch (error) {
+                    console.error('WhatsApp share error:', error);
+                }
+            });
+        }
+        
+        // Confetti
+        function confetti() {
+            try {
+                const colors = ['#E63946', '#FF85A2', '#FFD700', '#FF6B9D'];
+                for (let i = 0; i < 100; i++) {
+                    const c = document.createElement('div');
+                    c.className = 'confetti';
+                    c.style.left = Math.random() * 100 + 'vw';
+                    c.style.top = '-10px';
+                    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    c.style.animationDelay = Math.random() * 0.5 + 's';
+                    document.body.appendChild(c);
+                    setTimeout(() => c.remove(), 3000);
+                }
+            } catch (error) {
+                console.error('Confetti error:', error);
+            }
+        }
+        
+        // Receiver page
+        function loadReceiver() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const d = params.get('d');
+                
+                if (d) {
+                    const data = JSON.parse(decodeURIComponent(atob(d)));
+                    const landing = document.getElementById('landing');
+                    const receiver = document.getElementById('receiver');
+                    
+                    if (landing && receiver) {
+                        landing.style.display = 'none';
+                        receiver.classList.add('active');
+                    }
+                    
+                    // Set names
+                    const recName = document.getElementById('recName');
+                    const recRel = document.getElementById('recRel');
+                    const roseFrom = document.getElementById('roseFrom');
+                    const roseTo = document.getElementById('roseTo');
+                    
+                    if (recName) recName.textContent = data.receiver;
+                    if (recRel) recRel.textContent = data.relation;
+                    if (roseFrom) roseFrom.textContent = data.sender;
+                    if (roseTo) roseTo.textContent = data.receiver;
+                    
+                    // Get and display pre-designed message
+                    const preDesignedMsgEl = document.getElementById('preDesignedMsg');
+                    if (preDesignedMsgEl) {
+                        const preMsg = getPreDesignedMessage(data.relation);
+                        setTimeout(() => {
+                            preDesignedMsgEl.textContent = `"${preMsg}"`;
+                        }, 2000);
+                    }
+                    
+                    // Type message with animation
+                    setTimeout(() => typeMsg(data.message), 1000);
+                }
+            } catch (e) {
+                console.error('Error loading receiver page:', e);
+                alert('Invalid or corrupted link. Please request a new link from the sender.');
+                window.location.href = window.location.origin + window.location.pathname;
+            }
+        }
+        
+        function typeMsg(msg) {
+            try {
+                const el = document.getElementById('recMsg');
+                if (!el) return;
+                
+                el.textContent = '';
+                let i = 0;
+                const timer = setInterval(() => {
+                    if (i < msg.length) {
+                        el.textContent += msg.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(timer);
+                    }
+                }, 50);
+            } catch (error) {
+                console.error('Type message error:', error);
+            }
+        }
+        
+        function react(type) {
+            try {
+                if (type === 'yes') {
+                    confetti();
+                    alert('Aww! So glad you liked it! 💖');
+                } else {
+                    confetti();
+                    confetti();
+                    alert('You made their day too! 🌟💝');
+                }
+            } catch (error) {
+                console.error('React error:', error);
+            }
+        }
+        
+        function goHome() {
+            try {
+                window.location.href = window.location.origin + window.location.pathname;
+            } catch (error) {
+                console.error('Go home error:', error);
+            }
+        }
+        
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                createHearts();
+                countdown();
+                updateCounters();
+                initTicker();
+                
+                // Update counters and countdown regularly
+                setInterval(countdown, 1000);
+                setInterval(updateCounters, 5000);
+                
+                // Check if this is receiver page
+                loadReceiver();
+            } catch (error) {
+                console.error('Initialization error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
